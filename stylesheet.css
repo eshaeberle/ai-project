@@ -1,0 +1,205 @@
+.no-bullets {
+    list-style-type: none;
+}
+
+.text {
+    font-family: Tahoma, sans-serif;
+    margin: 40px;
+
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.column {
+    flex: 1;
+    min-width: 0;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.heading-two-text {
+    flex: 1;
+    text-align: left;
+}
+
+.ai-image {
+    flex: 0 0 40%;
+    margin: 40px;
+    text-align: center;
+}
+
+.ai-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.timeline-section {
+    margin: 40px;
+    font-family: Tahoma, sans-serif;
+}
+
+.timeline-title {
+    margin: 0 0 24px;
+}
+
+.timeline-scroll {
+    overflow-x: auto;
+    padding: 4px 0 20px;
+}
+
+.timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(210px, 1fr));
+    gap: 24px;
+    min-width: 1146px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    left: 0;
+    height: 4px;
+    background-color: #555;
+}
+
+.timeline-item {
+    position: relative;
+    padding-top: 34px;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: #222;
+}
+
+.timeline-item h4 {
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+
+.timeline-item p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.technology-hierarchy {
+    margin: 0 40px 40px;
+    font-family: Tahoma, sans-serif;
+}
+
+.hierarchy-level {
+    border: 2px solid var(--level-border);
+    border-radius: 12px;
+    padding: 24px;
+    background-color: var(--level-background);
+}
+
+.hierarchy-level .hierarchy-level {
+    margin: 24px 0 0 32px;
+}
+
+.hierarchy-level > h3,
+.hierarchy-level > h4,
+.hierarchy-level > h5,
+.hierarchy-level > h6 {
+    margin: 0 0 16px;
+    color: var(--level-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hierarchy-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hierarchy-level:not(.hierarchy-dl) > .hierarchy-list {
+    margin-bottom: 24px;
+}
+
+.hierarchy-list li {
+    padding: 6px 10px;
+    border: 1px solid var(--level-border);
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.hierarchy-ai {
+    --level-color: #9a3412;
+    --level-border: #fdba74;
+    --level-background: #fff7ed;
+}
+
+.hierarchy-ml {
+    --level-color: #9d174d;
+    --level-border: #f9a8d4;
+    --level-background: #fdf2f8;
+}
+
+.hierarchy-nn {
+    --level-color: #3f6212;
+    --level-border: #bef264;
+    --level-background: #f7fee7;
+}
+
+.hierarchy-dl {
+    --level-color: #075985;
+    --level-border: #7dd3fc;
+    --level-background: #f0f9ff;
+}
+
+@media (max-width: 700px) {
+    .technology-hierarchy {
+        margin: 0 20px 30px;
+    }
+
+    .hierarchy-level {
+        padding: 16px;
+    }
+
+    .hierarchy-level .hierarchy-level {
+        margin: 18px 0 0 10px;
+    }
+
+    .hierarchy-list li {
+        font-size: 13px;
+    }
+}
